@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>💖 Convite Especial 💖</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: monospace;
+      text-align: center;
+      padding: 30px;
+      color: #a2006c;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #d1005c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #d1005c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>💖 Oi, meu amor 💖</h1>
+  <p>Digite sim aqui embaixo, para saber o que tenho pra te dizer </p>
+  <input type="text" id="nameInput" placeholder="..." />
+  <br>
+  <button onclick="showMessage()">Ver mensagem</button>
+
+  <div class="message" id="messageArea"></div>
+
+  <script>
+    function showMessage() {
+      const name = document.getElementById("nameInput").value;
+      if (name.trim() === "") {
+        alert("Por favor, digite sim, amorzinho!");
+        return;
+      }
+      const msg = `
+        Oi amor! 💕<br><br>
+        Estava pensando em como você é maravilhosa<br>
+        E então pensei... que tal sairmos esse fim de semana?<br><br>
+        Sorvete 🍦? Filme 🎥? Pôr do sol 🌅?<br><br>
+        Com você, tudo fica perfeito! Eu te amo demais! <br><br>
+        Você topa? 🥺
+        <br><br>
+        <br><br> 
+        De: Bia <br><br>
+        Para: Clara
+      `;
+      document.getElementById("messageArea").innerHTML = msg;
+    }
+  </script>
+
+</body>
+
+</html> 
